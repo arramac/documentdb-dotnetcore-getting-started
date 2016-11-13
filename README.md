@@ -4,35 +4,28 @@ platforms: dotnet
 author: andrewhoh
 ---
 
-# Developing a .NET console app using DocumentDB
-This sample shows you how to use the Microsoft Azure DocumentDB service to store and access data from a .NET console application.
+# Developing a .NET Core console app using DocumentDB
+This sample shows you how to use the Microsoft Azure DocumentDB service to store and access data from a .NET Core console application.
 
-![.NET Console application](./media/image1.png)
-
-For a complete end-to-end walkthrough of creating this application, please refer to the [full tutorial on the Azure documentation page](https://azure.microsoft.com/documentation/articles/documentdb-get-started/).
+For a complete end-to-end walkthrough of creating this application, please refer to the [full tutorial on the Azure documentation page](https://azure.microsoft.com/documentation/articles/documentdb-get-started-dotnet-core/).
 
 ## Running this sample
 
 1. Before you can run this sample, you must have the following prerequisites:
-	- An active Azure DocumentDB account - If you don't have an account, refer to the [Create a DocumentDB account](https://azure.microsoft.com/en-us/documentation/articles/documentdb-create-account/) article.
-	- Visual Studio 2013 (or higher).
+* An active Azure account. If you don't have one, you can sign up for a [free account](https://azure.microsoft.com/free/). 
+    * Alternatively, you can use the [Azure DocumentDB Emulator](https://azure.microsoft.com/documentation/articles/documentdb-nosql-local-emulator) for this tutorial.
+* [Visual Studio 2015 Update 3](https://go.microsoft.com/fwlink/?LinkId=691129) and [.NET Core 1.0.1 - VS 2015 Tooling Preview 2](https://go.microsoft.com/fwlink/?LinkID=827546)
+    * If you're working on MacOS or Linux, you can develop .NET Core apps from the command-line by installing the [.NET Core SDK](https://www.microsoft.com/net/core#macos) for the plaform of your choice. 
+    * If you're working on Windows, you can develop .NET Core apps from the command-line by installing the [.NET Core SDK](https://www.microsoft.com/net/core#windows). 
+    *     * You can use your own editor, or download [Visual Studio Code](https://code.visualstudio.com/) which is free and works on Windows, Linux, and MacOS. 
 
 2.Clone this repository using Git for Windows (http://www.git-scm.com/), or download the zip file.
 
-3.From Visual Studio, open the **GetStarted.sln** file from the root directory.
+3.If using the DocumentDB Emulator, please follow instructions at [Azure DocumentDB Emulator](https://azure.microsoft.com/documentation/articles/documentdb-nosql-local-emulator) to install and start the emulator.
 
-4.In Visual Studio Build menu, select **Build Solution** (or Press F6). 
+If using your Azure DocumentDB account, please substitute the endpoint and authorization key in Program.cs with your account's details.
 
-5.Retrieve the URI and PRIMARY KEY (or SECONDARY KEY) values from the Keys blade of your DocumentDB account in the Azure Preview portal. For more information on obtaining endpoint & keys for your DocumentDB account refer to [How to manage a DocumentDB account](https://azure.microsoft.com/en-us/documentation/articles/documentdb-manage-account/#keys)
-
-If you don't have an account, see [Create a DocumentDB database account](https://azure.microsoft.com/en-us/documentation/articles/documentdb-create-account/) to set one up.
-
-6.In the **App.config** file, located in the src directory, find **endpoint** and **authKey** and replace the placeholder values with the values obtained for your account.
-
-    <add key="EndPointUrl" value="~your DocumentDB endpoint here~" />
-    <add key="AuthorizationKey" value="~your auth key here~" />
-
-7.You can now run and debug the application locally by pressing **F5** in Visual Studio.
+4.From a command prompt or shell, run `dotnet restore` followed by `dotnet run` to run the sample.
 
 ## About the code
 The code included in this sample is intended to get you quickly started with a .NET console application that connects to Azure DocumentDB.
