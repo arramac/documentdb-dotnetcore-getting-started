@@ -7,7 +7,7 @@ author: arramac
 # Developing a .NET Core console app using DocumentDB
 This sample shows you how to use the Microsoft Azure DocumentDB service to store and access data from a .NET Core console application.
 
-For a complete end-to-end walkthrough of creating this application, please refer to the [full tutorial on the Azure documentation page](https://azure.microsoft.com/documentation/articles/documentdb-get-started-dotnet-core/).
+For a complete end-to-end walkthrough of creating this application, please refer to the [full tutorial on the Azure documentation page](https://azure.microsoft.com/documentation/articles/documentdb-dotnetcore-get-started/).
 
 ## Running this sample
 
